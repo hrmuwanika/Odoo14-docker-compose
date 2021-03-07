@@ -75,10 +75,10 @@ The **addons/** folder contains custom addons. Just put your custom addons if yo
 addons_path = /mnt/extra-addons
 data_dir = /etc/odoo
 logfile = /etc/odoo/odoo-server.log
-admin_passwd = minhng.info
+admin_passwd = masterp@ssw0rd
 ```
 
-* Default database password (**admin_passwd**) is `minhng.info`, please change it!
+* Default database password (**admin_passwd**) is `masterp@ssw0rd`, please change it!
 
 # Odoo container management
 
