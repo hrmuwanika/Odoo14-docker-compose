@@ -2,7 +2,35 @@
 
 (Supports multiple Odoo instances on one server)
 
-Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) yourself, then run:
+Install [docker](https://docs.docker.com/get-docker/) 
+```bash
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo apt update
+apt-cache policy docker-ce
+sudo apt install docker-ce -y
+sudo systemctl enable docker
+sudo systemctl status docker
+
+```
+
+Install [docker-compose](https://docs.docker.com/compose/install/) 
+
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+Now we can set executable permissions for the file using the following command:
+```bash
+sudo chmod +x /usr/local/bin/docker-compose
+```
+Check docker composer version
+```bash
+docker-compose --version
+```
+
+Then run following commands:
 
 ``` bash
 # 1st Odoo @ localhost:10014
@@ -13,7 +41,7 @@ $ curl -s https://raw.githubusercontent.com/hrmuwanika/Odoo-14-docker-compose/ma
 ```
 
 Some arguments:
-* First argument (**odoo14-docker-compose-one**): Odoo deploy folder
+* First argument (**odoo-14-docker-compose-one**): Odoo deploy folder
 * Second argument (**10014**): Odoo port
 
 If `curl` is not found, install it:
