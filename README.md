@@ -6,10 +6,10 @@ Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https
 
 ``` bash
 # 1st Odoo @ localhost:10014
-$ curl -s https://raw.githubusercontent.com/hrmuwanika/odoo14-docker-compose/master/run.sh | sudo bash -s odoo-14-docker-compose-one 10014
+$ curl -s https://raw.githubusercontent.com/hrmuwanika/Odoo-14-docker-compose/main/run.sh | sudo bash -s odoo-14-docker-compose-one 10014
 
 # 2nd Odoo @ localhost:11014
-$ curl -s https://raw.githubusercontent.com/hrmuwanika/odoo14-docker-compose/master/run.sh | sudo bash -s odoo-14-docker-compose-two 11014
+$ curl -s https://raw.githubusercontent.com/hrmuwanika/Odoo-14-docker-compose/main/run.sh | sudo bash -s odoo-14-docker-compose-two 11014
 ```
 
 Some arguments:
@@ -19,7 +19,7 @@ Some arguments:
 If `curl` is not found, install it:
 
 ``` bash
-$ sudo apt-get install curl
+$ sudo apt install curl -y
 
 ```
 
