@@ -13,15 +13,14 @@ $ curl -s https://raw.githubusercontent.com/hrmuwanika/odoo14-docker-compose/mas
 ```
 
 Some arguments:
-* First argument (**odoo-14-docker-compose-one**): Odoo deploy folder
+* First argument (**odoo14-docker-compose-one**): Odoo deploy folder
 * Second argument (**10014**): Odoo port
 
 If `curl` is not found, install it:
 
 ``` bash
 $ sudo apt-get install curl
-# or
-$ sudo yum install curl
+
 ```
 
 # Usage
