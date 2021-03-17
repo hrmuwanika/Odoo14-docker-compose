@@ -5,12 +5,16 @@
 Install [docker](https://docs.docker.com/get-docker/) 
 ```bash
 sudo apt update
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sudo apt upgrade -y
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu (lsb_release -cs) stable"
 sudo apt update
 apt-cache policy docker-ce
-sudo apt install docker-ce -y
+sudo apt install -y docker-ce
+
+sudo usermod -aG docker $USER
+
 sudo systemctl enable docker
 sudo systemctl status docker
 
@@ -20,13 +24,7 @@ Install [docker-compose](https://docs.docker.com/compose/install/)
 
 ```bash
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-```
-Now we can set executable permissions for the file using the following command:
-```bash
 sudo chmod +x /usr/local/bin/docker-compose
-```
-Check docker composer version
-```bash
 docker-compose --version
 ```
 
