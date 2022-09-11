@@ -7,23 +7,23 @@ Installing Odoo 15 with one command.
 Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) yourself, then run:
 
 ``` bash
-curl -s https://raw.githubusercontent.com/hrmuwanika/odoo-15-docker-compose/main/run.sh | sudo bash -s odoo-one 10014 20014
+curl -s https://raw.githubusercontent.com/hrmuwanika/odoo-15-docker-compose/main/run.sh | sudo bash -s odoo-one 10015 20015
 ```
 
-to set up first Odoo instance @ `localhost:10014` (default master password: `abc.info`)
+to set up first Odoo instance @ `localhost:10015` (default master password: `abc.info`)
 
 and
 
 ``` bash
-curl -s https://raw.githubusercontent.com/hrmuwanika/odoo-15-docker-compose/main/run.sh | sudo bash -s odoo-two 11014 21014
+curl -s https://raw.githubusercontent.com/hrmuwanika/odoo-15-docker-compose/main/run.sh | sudo bash -s odoo-two 11015 21015
 ```
 
-to set up another Odoo instance @ `localhost:11014` (default master password: `abc.info`)
+to set up another Odoo instance @ `localhost:11015` (default master password: `abc.info`)
 
 Some arguments:
 * First argument (**odoo-one**): Odoo deploy folder
-* Second argument (**10014**): Odoo port
-* Third argument (**20014**): live chat port
+* Second argument (**10015**): Odoo port
+* Third argument (**20015**): live chat port
 
 If `curl` is not found, install it:
 
@@ -40,7 +40,7 @@ Start the container:
 docker-compose up
 ```
 
-* Then open `localhost:10014` to access Odoo 15.0. If you want to start the server with a different port, change **10014** to another value in **docker-compose.yml**:
+* Then open `localhost:10014` to access Odoo 15.0. If you want to start the server with a different port, change **10015** to another value in **docker-compose.yml**:
 
 ```
 ports:
@@ -102,7 +102,7 @@ docker-compose down
 
 # Live chat
 
-In [docker-compose.yml#L21](docker-compose.yml#L21), we exposed port **20014** for live-chat on host.
+In [docker-compose.yml#L21](docker-compose.yml#L21), we exposed port **20015** for live-chat on host.
 
 Configuring **nginx** to activate live chat feature (in production):
 
@@ -111,7 +111,7 @@ Configuring **nginx** to activate live chat feature (in production):
 server {
     #...
     location /longpolling/ {
-        proxy_pass http://0.0.0.0:20014/longpolling/;
+        proxy_pass http://0.0.0.0:20015/longpolling/;
     }
     #...
 }
