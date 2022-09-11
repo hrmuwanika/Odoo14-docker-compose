@@ -121,14 +121,15 @@ server {
 # docker-compose.yml
 
 * odoo:15.0
-* postgres:13
+* postgres:14
 
 # Odoo 15 screenshots
 
-![odoo-14-welcome-docker](screenshots/odoo-14-welcome-screenshot.png)
+<img src="screenshots/odoo-15-welcome-screenshot.png" width="50%">
 
-![odoo-14-apps-docker](screenshots/odoo-14-apps-screenshot.png)
+<img src="screenshots/odoo-15-apps-screenshot.png" width="100%">
 
-![odoo-14-sales](screenshots/odoo-14-sales-screen.png)
+<img src="screenshots/odoo-15-sales-screen.png" width="100%">
 
-![odoo-14-form](screenshots/odoo-14-sales-form.png)
+<img src="screenshots/odoo-15-product-form.png" width="100%">
+
