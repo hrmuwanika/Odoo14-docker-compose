@@ -7,7 +7,7 @@ Installing Odoo 14 with one command.
 Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) yourself, then run:
 
 ``` bash
-curl -s https://raw.githubusercontent.com/hrmuwanika/odoo-14-docker-compose/master/run.sh | sudo bash -s odoo-one 10014 20014
+curl -s https://raw.githubusercontent.com/hrmuwanika/odoo-14-docker-compose/main/run.sh | sudo bash -s odoo-one 10014 20014
 ```
 
 to set up first Odoo instance @ `localhost:10014` (default master password: `abc.info`)
@@ -15,7 +15,7 @@ to set up first Odoo instance @ `localhost:10014` (default master password: `abc
 and
 
 ``` bash
-curl -s https://raw.githubusercontent.com/hrmuwanika/odoo-14-docker-compose/master/run.sh | sudo bash -s odoo-two 11014 21014
+curl -s https://raw.githubusercontent.com/hrmuwanika/odoo-14-docker-compose/main/run.sh | sudo bash -s odoo-two 11014 21014
 ```
 
 to set up another Odoo instance @ `localhost:11014` (default master password: `abc.info`)
@@ -28,7 +28,7 @@ Some arguments:
 If `curl` is not found, install it:
 
 ``` bash
-$ sudo apt-get install curl
+$ sudo apt-get install curl -y
 # or
 $ sudo yum install curl
 ```
