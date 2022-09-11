@@ -11,14 +11,14 @@ services:
     volumes:
         - ./postgresql:/var/lib/postgresql/data
 
-  odoo15:
-    image: odoo:15
+  odoo14:
+    image: odoo:14
     user: root
     depends_on:
       - db
     ports:
-      - "10015:8069"
-      - "20015:8072" # live chat
+      - "10014:8069"
+      - "20014:8072" # live chat
     tty: true
     command: --
 #    command: odoo scaffold /mnt/extra-addons/custom_module
